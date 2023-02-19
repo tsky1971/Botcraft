@@ -370,6 +370,7 @@ set_target_properties(protocolCraft PROPERTIES DEBUG_POSTFIX "_d")
 set_target_properties(protocolCraft PROPERTIES RELWITHDEBINFO_POSTFIX "_rd")
 
 if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj")
     # To avoid having folder for each configuration when building with Visual
     set_target_properties(protocolCraft PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${BOTCRAFT_OUTPUT_DIR}/bin")
     set_target_properties(protocolCraft PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${BOTCRAFT_OUTPUT_DIR}/bin")
